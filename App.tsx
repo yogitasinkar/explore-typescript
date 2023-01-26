@@ -3,6 +3,9 @@ import './style.css';
 import Greet from './components/Greet';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import Status from './components/Status';
+import SubHeader from './components/SubHeader';
+import Header from './components/Header';
 
 export default function App() {
   const personName = {
@@ -20,9 +23,18 @@ export default function App() {
     <div>
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
-      <Greet name="Yogi" age={5} isLoggedIn={false} />
+      <Greet name="Yogi" age={5} isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={names} />
+      <Status status="success" />
+      <SubHeader>This is a sub heading</SubHeader>
+      <Header>
+        <div style={{ border: '1px solid black' }}>
+          <h2>This is main Heading</h2>
+          <SubHeader>This is a sub heading</SubHeader>
+        </div>
+      </Header>
+      <Greet name="Yogi" isLoggedIn={true} />
     </div>
   );
 }
