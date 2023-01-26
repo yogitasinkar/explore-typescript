@@ -6,6 +6,8 @@ import PersonList from './components/PersonList';
 import Status from './components/Status';
 import SubHeader from './components/SubHeader';
 import Header from './components/Header';
+import Button from './components/Button';
+import Input from './components/Input';
 
 export default function App() {
   const personName = {
@@ -35,6 +37,18 @@ export default function App() {
         </div>
       </Header>
       <Greet name="Yogi" isLoggedIn={true} />
+      <Button
+        label={'Click Me'}
+        handleClick={(event, id) => {
+          console.log('Button clicked', event, id);
+        }}
+      />
+      <Input
+        value="yogi"
+        handleChange={(event) => {
+          console.log('New value', event);
+        }}
+      />
     </div>
   );
 }
