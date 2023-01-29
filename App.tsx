@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Button from './components/Button';
 import Input from './components/Input';
 import Container from './components/Container';
+import User from './components/state/User';
 
 export default function App() {
   const personName = {
@@ -24,9 +25,8 @@ export default function App() {
   ];
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-      <Greet name="Yogi" age={5} isLoggedIn={true} />
+      <User />
+      {/* <Greet name="Yogi" age={5} isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={names} />
       <Status status="success" />
@@ -56,7 +56,7 @@ export default function App() {
           fontSize: '20px',
           padding: '10px',
         }}
-      />
+      /> */}
     </div>
   );
 }
