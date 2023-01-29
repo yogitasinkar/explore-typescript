@@ -8,6 +8,7 @@ import SubHeader from './components/SubHeader';
 import Header from './components/Header';
 import Button from './components/Button';
 import Input from './components/Input';
+import Container from './components/Container';
 
 export default function App() {
   const personName = {
@@ -47,6 +48,13 @@ export default function App() {
         value="yogi"
         handleChange={(event) => {
           console.log('New value', event);
+        }}
+      />
+      <Container
+        styles={{
+          border: '1px solid blue',
+          fontSize: '20px',
+          padding: '10px',
         }}
       />
     </div>
